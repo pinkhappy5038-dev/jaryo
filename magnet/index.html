@@ -92,6 +92,7 @@ h2 .dot{
 .promptbox .tag{
   padding:12px 16px 0;font-size:15px;font-weight:700;color:#C9BFB2;
 }
+.promptbox pre .slot{color:var(--red);font-weight:700}
 .promptbox pre{
   margin:0;padding:12px 16px 16px;font-size:17px;line-height:1.9;
   font-family:"Noto Sans KR",sans-serif;color:var(--box-ink);
@@ -119,6 +120,7 @@ details summary::after{content:"펼치기";font-size:15px;font-weight:400;color:
 details[open] summary::after{content:"접기"}
 details summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
 .eng{padding:0 18px 18px}
+.eng pre .slot{color:var(--red);font-weight:700}
 .eng pre{
   margin:0 0 4px;padding:14px;background:var(--box);border-radius:10px;
   font-size:15px;line-height:1.75;color:var(--box-ink);
@@ -196,21 +198,21 @@ details summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
 <h2><span class="dot">2</span>쓰는 법 3단계</h2>
 <ol class="steps">
   <li>챗GPT 앱을 열고 <b>+ 버튼</b>을 눌러 여행 사진을 올려요.</li>
-  <li>아래 프롬프트를 <b>복사해서 붙여넣어요.</b></li>
+  <li>아래 프롬프트를 <b>복사해서 붙여넣어요.</b><br><b>빨간 글씨 [ ] 안은 필요하면 바꾸고, 그대로 둬도 괜찮아요.</b></li>
   <li>나온 그림을 <b>길게 눌러 저장</b>해요. 마음에 안 들면 <b>"다시 그려줘"</b>라고 해요.</li>
 </ol>
 
 <h2><span class="dot">3</span>프롬프트</h2>
 <div class="promptbox">
-  <div class="tag">한글 프롬프트</div>
+  <div class="tag">한글 프롬프트<br><span style="font-weight:400;color:var(--ink-soft)"><span class="slot" style="color:var(--red);font-weight:700">[빨간 글씨]</span> 부분은 내 것으로 바꿔도 되는 곳이에요</span></div>
   <pre id="ko">올린 여행 사진 한 장만 참고 이미지로 사용해요.
-"머리가 크고 몸이 작은 귀여운 손그림 만화풍 여행 기념 마그넷"을 [세로 3:4] 비율 이미지로 만들어 주세요.
+"머리가 크고 몸이 작은 귀여운 손그림 만화풍 여행 기념 마그넷"을 <span class="slot">[세로 3:4]</span> 비율 이미지로 만들어 주세요.
 
 사람 수, 위치, 방향, 자세, 옷, 액세서리, 장소, 카메라 각도, 날씨, 분위기를 원본 사진과 똑같이 유지해 주세요. 어떤 요소도 더하거나 빼거나 바꾸지 마세요.
 
-마그넷 안의 그림은 사실적이면 안 돼요. 머리를 [15~20%] 크게 하고 몸은 조금 작게 하되, 얼굴과 헤어스타일[, 안경]은 알아볼 수 있어야 해요. 얼굴은 점으로 된 눈, 짧은 선으로 된 코, 곡선으로 된 입으로 단순하게 그려 주세요. 옷과 머리는 넓은 면을 한 가지 색으로 칠해 주세요. 손은 단순하게 그리되 손동작은 정확해야 해요. 배경은 윤곽선과 꼭 필요한 색만 남기고 단순하게 해 주세요. 선은 [진한 갈색]으로 굵기가 일정하지 않게, 군데군데 흔들리고 끊기게 그려 주세요. [색연필, 크레용, 마커] 질감을 섞어 주세요. 색이 고르지 않게 칠해지고, 선 밖으로 색이 번지고, 빈 곳이 생기고, 색 알갱이가 보이게 해서 손으로 그린 여행 스케치북 느낌을 내 주세요.
+마그넷 안의 그림은 사실적이면 안 돼요. 머리를 <span class="slot">[15~20%]</span> 크게 하고 몸은 조금 작게 하되, 얼굴과 헤어스타일<span class="slot">[, 안경]</span>은 알아볼 수 있어야 해요. 얼굴은 점으로 된 눈, 짧은 선으로 된 코, 곡선으로 된 입으로 단순하게 그려 주세요. 옷과 머리는 넓은 면을 한 가지 색으로 칠해 주세요. 손은 단순하게 그리되 손동작은 정확해야 해요. 배경은 윤곽선과 꼭 필요한 색만 남기고 단순하게 해 주세요. 선은 <span class="slot">[진한 갈색]</span>으로 굵기가 일정하지 않게, 군데군데 흔들리고 끊기게 그려 주세요. <span class="slot">[색연필, 크레용, 마커]</span> 질감을 섞어 주세요. 색이 고르지 않게 칠해지고, 선 밖으로 색이 번지고, 빈 곳이 생기고, 색 알갱이가 보이게 해서 손으로 그린 여행 스케치북 느낌을 내 주세요.
 
-마그넷은 모서리가 둥글게 잘려 있고, 좁은 [아이보리색] 테두리와 자연스러운 두께가 있어요. 실제 손이 아래에서 마그넷을 들고 있어요. 마그넷은 또렷하게, 뒤에 보이는 실제 장소는 살짝 흐리게 하고, 위쪽에는 빈 공간을 남겨 주세요.
+마그넷은 모서리가 둥글게 잘려 있고, 좁은 <span class="slot">[아이보리색]</span> 테두리와 자연스러운 두께가 있어요. 실제 손이 아래에서 마그넷을 들고 있어요. 마그넷은 또렷하게, 뒤에 보이는 실제 장소는 살짝 흐리게 하고, 위쪽에는 빈 공간을 남겨 주세요.
 
 글자, 로고, 브랜드, 워터마크, 추가 인물이나 사물을 넣지 마세요. 그리고 사실적인 스타일, 애니메이션풍, 3D, 점토 느낌, 벡터 그래픽, 상업용 일러스트 스타일은 쓰지 마세요.</pre>
 </div>

@@ -93,6 +93,7 @@ h2 .dot{
 .promptbox .tag{
   padding:14px 16px 0;font-size:16px;font-weight:700;color:var(--red);
 }
+.promptbox pre .slot{color:var(--red);font-weight:700}
 .promptbox pre{
   margin:0;padding:12px 16px 16px;font-size:17px;line-height:1.9;
   font-family:"Noto Sans KR",sans-serif;color:var(--ink);
@@ -191,17 +192,17 @@ details summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
 <h2><span class="dot">2</span>쓰는 법 3단계</h2>
 <ol class="steps">
   <li>제미나이나 챗GPT 앱을 열고 <b>+ 버튼</b>을 눌러 <b>내 사진 한 장</b>을 올려요.<br>엄뚝이는 첫 그림을 제미나이로 만들었어요. 두 앱 모두 똑같이 돼요.</li>
-  <li>아래 프롬프트를 <b>복사해서 붙여넣어요.</b><br><b>[ ] 안은 필요하면 바꾸고, 그대로 둬도 괜찮아요.</b></li>
+  <li>아래 프롬프트를 <b>복사해서 붙여넣어요.</b><br><b>빨간 글씨 [ ] 안은 필요하면 바꾸고, 그대로 둬도 괜찮아요.</b></li>
   <li>나온 그림을 <b>길게 눌러 저장</b>해요. 마음에 안 들면 <b>"다시 그려줘"</b>라고 해요.</li>
 </ol>
 
 <h2><span class="dot">3</span>프롬프트</h2>
 <div class="promptbox">
-  <div class="tag">한글 프롬프트</div>
+  <div class="tag">한글 프롬프트<br><span style="font-weight:400;color:var(--ink-soft)"><span class="slot" style="color:var(--red);font-weight:700">[빨간 글씨]</span> 부분은 내 것으로 바꿔도 되는 곳이에요</span></div>
   <pre id="ko">업로드한 인물 사진을 참고해 얼굴과 헤어스타일은 유지하고, 귀여운 수공예 미니어처 스타일로 만들어 주세요.
-인물은 [붕어빵 후드 코스튬]을 입고 [작은 아기 고양이]와 함께 있습니다.
-장소는 [가을 북카페], 재질은 [종이 공예], 분위기는 [따뜻한 초가을 오후]로 표현해 주세요.
-주변에는 장소를 잘 보여주는 소품을 넣고, 따뜻하고 아기자기한 느낌으로, 매크로 사진 스타일, 얕은 심도, [세로 4:5]로 만들어 주세요.</pre>
+인물은 <span class="slot">[붕어빵 후드 코스튬]</span>을 입고 <span class="slot">[작은 아기 고양이]</span>와 함께 있습니다.
+장소는 <span class="slot">[가을 북카페]</span>, 재질은 <span class="slot">[종이 공예]</span>, 분위기는 <span class="slot">[따뜻한 초가을 오후]</span>로 표현해 주세요.
+주변에는 장소를 잘 보여주는 소품을 넣고, 따뜻하고 아기자기한 느낌으로, 매크로 사진 스타일, 얕은 심도, <span class="slot">[세로 4:5]</span>로 만들어 주세요.</pre>
 </div>
 <button class="btn" id="btnKo">복사하기</button>
 

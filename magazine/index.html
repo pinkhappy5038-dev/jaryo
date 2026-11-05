@@ -93,6 +93,7 @@ h2 .dot{
 .promptbox .tag{
   padding:14px 16px 0;font-size:16px;font-weight:700;color:var(--red);
 }
+.promptbox pre .slot{color:var(--red);font-weight:700}
 .promptbox pre{
   margin:0;padding:12px 16px 16px;font-size:17px;line-height:1.9;
   font-family:"Noto Sans KR",sans-serif;color:var(--ink);
@@ -120,6 +121,7 @@ details summary::after{content:"펼치기";font-size:16px;font-weight:400;color:
 details[open] summary::after{content:"접기"}
 details summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
 .eng{padding:0 18px 18px}
+.eng pre .slot{color:var(--red);font-weight:700}
 .eng pre{
   margin:0 0 10px;padding:15px;background:var(--card2);border:2px solid var(--rule);
   border-radius:10px;font-size:16px;line-height:1.8;color:var(--ink);
@@ -193,14 +195,14 @@ details summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
 <h2><span class="dot">2</span>쓰는 법 3단계</h2>
 <ol class="steps">
   <li>챗GPT 앱을 열고 <b>+ 버튼</b>을 눌러 <b>전신 사진</b> 한 장을 올려요.</li>
-  <li>아래 프롬프트를 <b>복사해서 붙여넣어요.</b><br><b>[ ] 안은 필요하면 바꾸고, 그대로 둬도 괜찮아요.</b></li>
+  <li>아래 프롬프트를 <b>복사해서 붙여넣어요.</b><br><b>빨간 글씨 [ ] 안은 필요하면 바꾸고, 그대로 둬도 괜찮아요.</b></li>
   <li>나온 그림을 <b>길게 눌러 저장</b>해요. <b>"다시 그려줘"라고 하면 완전히 다른 옷</b>이 나와요. 이 프롬프트는 그게 재미예요 — 여러 번 돌려서 제일 마음에 드는 걸 고르세요.</li>
 </ol>
 
 <h2><span class="dot">3</span>프롬프트</h2>
 <div class="promptbox">
-  <div class="tag">한글 프롬프트</div>
-  <pre id="ko">올린 사진을 손으로 그린 구아슈 물감 그림체의 패션 잡지 표지로 바꿔 주세요. [4:5 세로] 표지로 만들어 주세요.
+  <div class="tag">한글 프롬프트<br><span style="font-weight:400;color:var(--ink-soft)"><span class="slot" style="color:var(--red);font-weight:700">[빨간 글씨]</span> 부분은 내 것으로 바꿔도 되는 곳이에요</span></div>
+  <pre id="ko">올린 사진을 손으로 그린 구아슈 물감 그림체의 패션 잡지 표지로 바꿔 주세요. <span class="slot">[4:5 세로]</span> 표지로 만들어 주세요.
 
 ■ 옷은 반드시 전부 새로 입힌다 (제일 중요)
 
@@ -212,7 +214,7 @@ details summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
 
 ■ 스타일은 사진을 보고 고른다
 
-사진 속 사람의 얼굴, 머리, 피부색, 나이, 분위기를 살펴본 다음, 그 사람에게 가장 잘 어울리는 유행 스타일을 [아래 일곱 가지 중에서 하나 골라 주세요].
+사진 속 사람의 얼굴, 머리, 피부색, 나이, 분위기를 살펴본 다음, 그 사람에게 가장 잘 어울리는 유행 스타일을 <span class="slot">[아래 일곱 가지 중에서 하나 골라 주세요]</span>.
 
 - 알록달록 조각보 니트에 술 달린 치마, 두툼한 복고풍 운동화
 - 넉넉한 파스텔 정장에 짧은 니트 조끼, 로고 양말과 로퍼
@@ -244,11 +246,11 @@ details summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
 
 ■ 글자
 
-맨 위에 가로 전체를 채우는 잡지 제목을 넣어 주세요. 완성된 그림의 분위기와 계절에 어울리게 새로 지어낸 [영어 4~7글자] 한 단어로, 획 굵기 차이가 큰 디돈 세리프체로 크게, 색은 표지 색 중에서 골라 주세요. 사람의 머리나 모자가 글자를 살짝 가리게 해 주세요. 그 아래 오른쪽에 작게 영어로 STYLE 을 넣어 주세요.
+맨 위에 가로 전체를 채우는 잡지 제목을 넣어 주세요. 완성된 그림의 분위기와 계절에 어울리게 새로 지어낸 <span class="slot">[영어 4~7글자]</span> 한 단어로, 획 굵기 차이가 큰 디돈 세리프체로 크게, 색은 표지 색 중에서 골라 주세요. 사람의 머리나 모자가 글자를 살짝 가리게 해 주세요. 그 아래 오른쪽에 작게 영어로 STYLE 을 넣어 주세요.
 
 나머지 글자는 전부 한글로, 이 표지의 새 옷·색·계절·동물·분위기를 설명하는 말로 새로 지어 주세요. 뻔한 말은 쓰지 마세요. 짧고 멋스러운 잡지 문구(각 2~10글자)로, 흰색이나 크림색 명조체로 좌우 여백에 넣고, 얼굴은 절대 가리지 마세요.
 
-- 왼쪽 위: [2024 봄 1호]
+- 왼쪽 위: <span class="slot">[2024 봄 1호]</span>
 - 왼쪽: 옷 콘셉트를 말해 주는 큰 기울임체 헤드라인 하나
 - 왼쪽: 분위기를 말해 주는 작은 보조 문구 하나
 - 왼쪽 가운데: 이번 계절 유행을 말해 주는 굵은 섹션 제목 하나
@@ -267,7 +269,7 @@ details summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
 <details>
   <summary>영어 원문도 보기 (온나리가 쓴 그대로)</summary>
   <div class="eng">
-    <pre id="en">Transform the attached image into an iconic fashion magazine cover in a hand-painted gouache illustration style. [4:5 vertical] cover.
+    <pre id="en">Transform the attached image into an iconic fashion magazine cover in a hand-painted gouache illustration style. <span class="slot">[4:5 vertical]</span> cover.
 
 [MANDATORY OUTFIT REPLACEMENT — HIGHEST PRIORITY]
 
@@ -279,7 +281,7 @@ Preserve only the subject's face, facial features, skin tone, hairstyle, hair co
 
 [RANDOM EDITORIAL STYLING — decide from the attached image]
 
-Analyze the subject's face, hair, skin tone, age and vibe, then [randomly pick ONE] trend-forward fashion direction that flatters them most, for example:
+Analyze the subject's face, hair, skin tone, age and vibe, then <span class="slot">[randomly pick ONE]</span> trend-forward fashion direction that flatters them most, for example:
 
 - playful patchwork knit layers with a fringed skirt and chunky retro sneakers
 - oversized pastel tailoring with a cropped knit vest and loafers with logo socks
@@ -311,11 +313,11 @@ Hand-painted gouache and acrylic illustration, visible brushstrokes and dry-brus
 
 [ADAPTIVE TYPOGRAPHY]
 
-Masthead at the top spanning the full width: one short English word ([4-7 letters]) invented to match the final image's mood and season, large high-contrast Didone serif in a color pulled from the palette, partially overlapped by the subject's head or hat. Small English "STYLE" beneath it on the right.
+Masthead at the top spanning the full width: one short English word (<span class="slot">[4-7 letters]</span>) invented to match the final image's mood and season, large high-contrast Didone serif in a color pulled from the palette, partially overlapped by the subject's head or hat. Small English "STYLE" beneath it on the right.
 
 All other cover text in Korean, written fresh to describe this cover's new outfit, colors, season, animal and mood, never generic. Short stylish magazine phrases (2-10 characters each), white or cream serif type on the left and right margins, never covering the face:
 
-- top left: [2024 봄 1호]
+- top left: <span class="slot">[2024 봄 1호]</span>
 - left: one large italic headline naming the outfit concept
 - left: one small subline about the mood
 - left middle: one bold section title about the season's trend
